@@ -2,6 +2,8 @@ group 'com.lsyiverson'
 version '0.0.1'
 
 apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = "com.lsyiverson.pos_machine.PosMachine"
 
 sourceCompatibility = 1.8
 
