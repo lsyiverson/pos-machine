@@ -3,7 +3,9 @@ version '0.0.1'
 
 apply plugin: 'java'
 apply plugin: 'application'
-mainClassName = "com.lsyiverson.pos_machine.PosMachine"
+apply from: 'config.gradle'
+
+mainClassName = "com.lsyiverson.pos_machine.PosMachineRunner"
 
 sourceCompatibility = 1.8
 
@@ -12,5 +14,9 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile rootProject.ext.dependencies.gson
+
+    testCompile rootProject.ext.dependencies.junit
+    testCompile rootProject.ext.dependencies.mockito
+    testCompile rootProject.ext.dependencies.assertj
 }
